@@ -87,6 +87,14 @@ class GuideCaptureAndReplayTests(unittest.TestCase):
             _extract_prompt_text('draft a post saying "hello world"'),
             "hello world",
         )
+        self.assertEqual(
+            _extract_prompt_text("Type this text as the post: hello. Leave the composer open."),
+            "hello",
+        )
+        self.assertEqual(
+            _extract_prompt_text("Type this text as the post title: hi there"),
+            "hi there",
+        )
 
     def test_named_services_produce_generic_guide_site_keys(self):
         cases = {

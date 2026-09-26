@@ -706,20 +706,28 @@ def _fast_path(
                 if step.parameter == "navigation_url" or step.text is None
                 else _replay_line(step)
             )
-            navigation_url_entered = step.parameter == "navigation_url" or step.text is None
+            navigation_url_entered = True
             address_bar_focused = False
-        elif navigation_url_entered and step.kind == "press" and step.text is None:
+        elif navigation_url_entered and step.kind == "press" and step.text in (None, "enter", "return"):
             lines.append("pyautogui.press('enter')")
-            # LinkedIn needs longer than the normal inter-action pause to load.
-            lines.append("time.sleep(5.0)")
+            # Sites like LinkedIn and Gmail need several seconds to load.
+            lines.append("time.sleep(7.0)")
             navigation_url_entered = False
             continue
+        elif step.kind == "launch_app":
+            # The app must be frontmost before the next keystroke, or it lands
+            # in whatever window was in front (e.g. the terminal).
+            lines.append(_replay_line(step))
+            lines.append("time.sleep(2.5)")
         elif step.seq == prompt_step:
             lines.append(
                 f"pyautogui.write({prompt_text!r})" if prompt_text else "pass"
             )
         else:
             lines.append(_replay_line(step))
+            if step.kind in ("click", "doubleClick"):
+                # A click often opens a dialog (e.g. a post composer); let it render.
+                lines.append("time.sleep(3.0)")
         lines.append("time.sleep(0.4)")
         # The runtime policy requires a fresh screenshot every few actions;
         # take one per step so long guides are not blocked mid-replay.
@@ -768,6 +776,14 @@ def _extract_prompt_text(prompt: str) -> str | None:
     )
     if quoted:
         return quoted.group(1).strip() or None
+    # "type this text as the post: hello. Leave the composer open ..."
+    labelled = re.search(
+        r"\bas the (?:post|message|comment|reply)(?: title| body)?:\s*(.+?)(?:\.\s|\.?\s*$)",
+        prompt,
+        re.IGNORECASE,
+    )
+    if labelled:
+        return labelled.group(1).strip() or None
     unquoted = re.search(
         r"\b(?:saying|that says|with the text|with text|text:)\s+(.+?)\s*[.!?]*$",
         prompt,
