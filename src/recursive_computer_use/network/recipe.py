@@ -42,7 +42,7 @@ from urllib.parse import quote, urlsplit
 
 KIND = "api_recipe"
 STATUSES = ("candidate", "active", "retired")
-METHODS = frozenset({"GET", "POST", "PUT", "PATCH", "DELETE"})
+METHODS = frozenset({"GET", "POST", "PUT", "PATCH", "DELETE", "QUERY"})  # QUERY: safe GET with a body
 EXTRACT_SOURCES = frozenset({"json", "header", "cookie", "regex"})
 CHOOSE_MODES = {"one": 1, "per_name": 2}  # mode -> required capture groups
 BODY_FORMATS = frozenset({"json", "form", "text"})

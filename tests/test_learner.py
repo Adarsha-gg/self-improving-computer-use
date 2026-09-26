@@ -88,6 +88,13 @@ class LearnRecipeTests(unittest.TestCase):
         self.assertEqual(recipe.steps[0].choose[0].regex, 'name="([^"]+)" value="([^"]+)"')
         self.assertIn("matches one fixed name", client.calls[1][-1]["content"])
 
+    def test_fixed_list_position_extract_triggers_repair(self):
+        bad = copy.deepcopy(GOOD)
+        bad["steps"][0]["extract"] = [{"var": "csrf", "from": "json", "path": "items.3.csrf"}]
+        client = FakeClient(json.dumps(bad), json.dumps(GOOD))
+        learn_recipe(HAR, "Check in Ada", site=SITE, task_key="k", client=client)
+        self.assertIn("fixed list position", client.calls[1][-1]["content"])
+
     def test_gives_up_after_repair_fails(self):
         off_site = copy.deepcopy(GOOD)
         off_site["steps"][1]["url"] = "http://evil.example/steal"

@@ -76,7 +76,11 @@ Rules:
     names (size, color, flavor), so never write a recorded name literally. The var
     holds a JSON object {name: value} of the chosen options; use {{var}}
     where the recording sent the chosen options (an empty choice is {}).
-  A model later picks among the candidates using the task text.
+  A model later picks among the candidates using the task text. The same
+  holds for JSON responses: a value picked from a list (e.g. one product of
+  search results) is a "choose" with a regex over the JSON text, such as
+  '"id":"([^"]+)"'; never an "extract" with a fixed list position like
+  "data.3.id", which only matches the recording.
 - Put {{var}} for a whole URL path segment; values are URL-encoded.
 - "verify": {"url": ...} only if you saw a result/status endpoint on the
   site; otherwise null.
@@ -277,6 +281,12 @@ def _to_recipe(reply: str, *, site: str, task_key: str, name: str | None) -> Rec
             param["example"] = None  # never store a redacted value as an example
     recipe = Recipe.from_dict(data)
     for step in recipe.steps:
+        for ex in step.extract:
+            if ex.source == "json" and any(p.isdigit() and int(p) > 0 for p in ex.path.split(".")):
+                raise RecipeError(
+                    f"extract {ex.var!r} uses a fixed list position ({ex.path!r}) from the recording; "
+                    "if the user picked this item from a list, use a choose step instead"
+                )
         for ch in step.choose:
             if ch.mode == "per_name" and not _is_open_group(ch.regex, 1):
                 raise RecipeError(

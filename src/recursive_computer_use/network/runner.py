@@ -206,8 +206,43 @@ _TAG_RE = re.compile(r"<[^>]+>")
 _SPACE_RE = re.compile(r"\s+")
 
 
+def _json_contexts(text: str) -> dict[str, str]:
+    """For a JSON body: each string value -> a compact view of the object holding it.
+
+    The chooser then sees a candidate's whole record (name, price, category...)
+    even when a long field sits between the id and the price.
+    """
+    try:
+        data = json.loads(text)
+    except (ValueError, TypeError):
+        return {}
+    out: dict[str, str] = {}
+
+    def brief(v: Any) -> Any:
+        if isinstance(v, str):
+            return v if len(v) <= 60 else v[:60] + "…"
+        if isinstance(v, dict):
+            return {k: brief(x) for k, x in v.items() if isinstance(x, (str, int, float, bool)) and k in {"name", "id", "title"}}
+        return v if isinstance(v, (int, float, bool)) or v is None else "…"
+
+    def walk(node: Any) -> None:
+        if isinstance(node, dict):
+            view = json.dumps({k: brief(v) for k, v in node.items()}, ensure_ascii=False)
+            for v in node.values():
+                if isinstance(v, str) and v not in out:
+                    out[v] = view
+            for v in node.values():
+                walk(v)
+        elif isinstance(node, list):
+            for v in node:
+                walk(v)
+
+    walk(data)
+    return out
+
+
 def candidates_for(choose: Choose, html: str) -> list[dict[str, Any]]:
-    """Candidates for *choose* in *html*, deduplicated, in page order."""
+    """Candidates for *choose* in *html* (or JSON), deduplicated, in page order."""
     if choose.mode == "per_name":
         groups: dict[str, list[str]] = {}
         for m in re.finditer(choose.regex, html):
@@ -218,6 +253,7 @@ def candidates_for(choose: Choose, html: str) -> list[dict[str, Any]]:
         return [{"name": n, "values": v} for n, v in list(groups.items())[: choose.max]]
     seen: set[str] = set()
     out: list[dict[str, Any]] = []
+    json_views = _json_contexts(html)
     for m in re.finditer(choose.regex, html):
         value = html_unescape(m.group(1))  # values come from HTML attributes
         if value in seen:
@@ -228,7 +264,8 @@ def candidates_for(choose: Choose, html: str) -> list[dict[str, Any]]:
         start = tag_end + 1 if tag_end != -1 else start
         window = html[start : start + choose.context * 6]
         text = _SPACE_RE.sub(" ", html_unescape(_TAG_RE.sub(" ", window))).strip()
-        out.append({"value": value, "context": text[: choose.context]})
+        view = json_views.get(value)
+        out.append({"value": value, "context": view[: max(choose.context, 600)] if view else text[: choose.context]})
         if len(out) >= choose.max:
             break
     return out
