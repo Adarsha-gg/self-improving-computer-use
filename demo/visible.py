@@ -59,8 +59,7 @@ def bring_to_front(page: Any = None) -> None:
     try:
         if page is not None:
             page.bring_to_front()
-        subprocess.Popen(["osascript", "-e", 'tell application "Google Chrome for Testing" to activate'],
-                         stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        ws.activate_browser()
     except Exception:  # noqa: BLE001 - cosmetic only
         pass
 
@@ -70,9 +69,12 @@ def open_window(pw: Any, rect: tuple[int, int, int, int], *, slow_mo: int = 0, z
     x, y, w, h = rect
     browser = pw.chromium.launch(
         headless=False, slow_mo=slow_mo,
-        args=[f"--window-position={x},{y}", f"--window-size={w},{h}", f"--force-device-scale-factor={zoom}"],
+        **ws.headed_browser([f"--window-position={x},{y}", f"--window-size={w},{h}"]),
     )
-    page = browser.new_context(no_viewport=True).new_page()
+    # CSS zoom, not --force-device-scale-factor: stable Chrome paints a blank window with that flag.
+    context = browser.new_context(no_viewport=True)
+    context.add_init_script(f"document.addEventListener('DOMContentLoaded', () => document.documentElement.style.zoom = '{zoom}')")
+    page = context.new_page()
     bring_to_front(page)
     return browser, page
 

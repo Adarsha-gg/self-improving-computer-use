@@ -35,7 +35,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "src"))
 
-from demo import visible  # noqa: E402
+from demo import toolshop, visible  # noqa: E402
 from scripts import webshop_eval as ws  # noqa: E402
 from recursive_computer_use.network.learner import default_client  # noqa: E402
 from recursive_computer_use.network.recipe import KIND  # noqa: E402
@@ -87,7 +87,7 @@ def port_open(port: int) -> bool:
 
 def recipes() -> list[dict[str, Any]]:
     docs = store().skills.find(
-        {"kind": KIND, "scope.site": ws.SITE},
+        {"kind": KIND, "scope.site": {"$in": [ws.SITE, toolshop.SITE]}},
         {"name": 1, "version": 1, "status": 1, "uses": 1, "wins": 1, "lift": 1, "updated_at": 1, "description": 1},
     ).sort([("updated_at", -1)]).limit(20)
     return [
@@ -146,6 +146,85 @@ def _new_windows() -> threading.Event:
     _close_windows.set()
     _close_windows = threading.Event()
     return _close_windows
+
+
+TOOLSHOP_VERIFY = ("pliers", "screwdriver")  # the demo item plus one it never saw
+
+
+def teach_toolshop(show: bool = True, attempts: int = 2) -> None:
+    """Teach on the real Toolshop site, then verify on two items before sharing."""
+    publish("teach", {"kind": "start", "text": "Teach on practicesoftwaretesting.com"})
+    if show:
+        _new_windows()
+    for attempt in range(1, attempts + 1):
+        recipe = toolshop.teach(store(), lambda e: publish("teach", e), show=show,
+                                window=visible.slot(0, 1) if show else None)
+        publish("teach", {"kind": "verify", "text": f"Verifying on {', '.join(TOOLSHOP_VERIFY)} (API replay, graded by reading the cart)"})
+        scores = []
+        for item in TOOLSHOP_VERIFY:
+            row = toolshop.run_recipe_task(recipe, item, client(),
+                                           lambda e: publish("teach", {**e, "kind": "verify"}) if e["kind"] == "done" else None)
+            scores.append(row["reward"])
+        ok = min(scores) >= ws.RECIPE_OK_REWARD
+        status = store().record_result(recipe.id, ok=ok, run_ms=0, steps=[{}] * len(recipe.steps),
+                                       task="verify: " + ", ".join(TOOLSHOP_VERIFY), llm_calls=len(scores) * 2)
+        publish("teach", {"kind": "atlas", "text": f"Verified {scores}; recipe v{recipe.version} is now {status} in MongoDB"})
+        if status == "active":
+            return
+        if attempt < attempts:
+            publish("teach", {"kind": "learn", "text": "Verification failed, so the recipe retired. Learning again..."})
+
+
+def race_toolshop(item: str, show: bool = True) -> None:
+    close = _new_windows() if show else None
+    done = {"recipe": threading.Event(), "browse": threading.Event()}
+
+    def hold(lane: str, browser: Any) -> None:
+        done[lane].set()
+        if close is not None:
+            close.wait(WINDOW_HOLD_S)
+        browser.close()
+
+    def recipe_lane() -> None:
+        publish("recipe", {"kind": "start", "text": toolshop.instruction(item)})
+        if not show:
+            toolshop.run_from_atlas(store(), item, client(), lambda e: publish("recipe", e))
+            return
+        from playwright.sync_api import sync_playwright
+
+        with sync_playwright() as pw:
+            browser, page = visible.open_window(pw, visible.split_slot(0))
+            page.goto(toolshop.UI, wait_until="domcontentloaded")
+            visible.banner(page, "Agent using MongoDB · looking up a recipe...", "#1f6feb")
+            row = toolshop.run_from_atlas(store(), item, client(), lambda e: publish("recipe", e))
+            toolshop.show_cart(page, row, visible.banner)
+            hold("recipe", browser)
+
+    def browse_lane() -> None:
+        publish("browse", {"kind": "start", "text": toolshop.instruction(item)})
+        from playwright.sync_api import sync_playwright
+
+        with sync_playwright() as pw:
+            if show:
+                browser, page = visible.open_window(pw, visible.split_slot(1), slow_mo=200)
+            else:
+                browser = pw.chromium.launch(headless=True)
+                page = browser.new_page()
+            toolshop.browse_visible(page, item, client(), lambda e: publish("browse", e), visible.banner)
+            hold("browse", browser)
+
+    def run_lane(lane: str, fn: Any) -> None:
+        try:
+            fn()
+        except Exception as exc:  # noqa: BLE001
+            publish(lane, {"kind": "error", "text": f"{type(exc).__name__}: {exc}"[:300]})
+        finally:
+            done[lane].set()
+
+    for lane, fn in (("recipe", recipe_lane), ("browse", browse_lane)):
+        threading.Thread(target=run_lane, args=(lane, fn), daemon=True).start()
+    for ev in done.values():
+        ev.wait(600)
 
 
 def teach(n: int, show: bool = True, attempts: int = 2) -> None:
@@ -229,7 +308,7 @@ def forget() -> int:
     """Retire every live WebShop recipe (history is kept), to demo teaching from scratch."""
     now = ws.datetime.now(ws.datetime.now().astimezone().tzinfo)
     res = store().skills.update_many(
-        {"kind": KIND, "scope.site": ws.SITE, "status": {"$in": ["candidate", "active"]}},
+        {"kind": KIND, "scope.site": {"$in": [ws.SITE, toolshop.SITE]}, "status": {"$in": ["candidate", "active"]}},
         {"$set": {"status": "retired", "retired_at": now, "updated_at": now, "retirement_reason": "demo reset"}},
     )
     return res.modified_count
@@ -284,8 +363,8 @@ class Handler(BaseHTTPRequestHandler):
             self.wfile.write(body)
         elif self.path == "/api/status":
             self._json(200, status())
-        elif self.path == "/api/tasks":
-            self._json(200, instructions())
+        elif self.path.startswith("/api/tasks"):
+            self._json(200, toolshop.tasks() if "site=toolshop" in self.path else instructions())
         elif self.path == "/events":
             self._events()
         else:
@@ -297,9 +376,17 @@ class Handler(BaseHTTPRequestHandler):
             return
         try:
             body = json.loads(self.rfile.read(int(self.headers.get("Content-Length", 0)) or 2) or b"{}")
-            n, show = int(body.get("task", 0)), bool(body.get("show", True))
+            site, show = str(body.get("site", "webshop")), bool(body.get("show", True))
+            n = str(body.get("task", "")) if site == "toolshop" else int(body.get("task", 0))
         except (ValueError, AttributeError):
             self._json(400, {"error": "bad request"})
+            return
+        if site == "toolshop" and self.path in {"/api/teach", "/api/race"}:
+            if self.path == "/api/race" and n not in toolshop.ITEMS:
+                self._json(400, {"error": "unknown item"})
+                return
+            job = _job("teach", teach_toolshop, show) if self.path == "/api/teach" else _job("race", race_toolshop, n, show)
+            self._json(202 if job else 409, {"ok": True})
             return
         if n not in TASKS and self.path in {"/api/teach", "/api/race"}:
             self._json(400, {"error": "task out of range"})
@@ -377,10 +464,11 @@ table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}th,t
 th{color:var(--dim);font-weight:500}.st-active{color:var(--green)}.st-candidate{color:var(--amber)}.st-retired{color:var(--dim)}
 #feed{max-height:260px}
 </style></head><body>
-<header><h1>Learn once, reuse everywhere <small>· WebShop · MongoDB Atlas</small></h1>
+<header><h1>Learn once, reuse everywhere <small>· Toolshop &amp; WebShop · MongoDB Atlas</small></h1>
 <span id="p-webshop" class="pill">WebShop</span><span id="p-proxy" class="pill">Model proxy</span><span id="p-mongodb" class="pill">MongoDB</span></header>
 <main>
 <div class="controls">
+  <label>Site <select id="site"><option value="toolshop">Toolshop (real public site)</option><option value="webshop">WebShop (local benchmark)</option></select></label>
   <label>Task <select id="task"></select></label>
   <button id="race" class="primary">Race on this task</button>
   <label title="Open real browser windows on the WebShop site"><input type="checkbox" id="show" checked> Show in browser windows</label>
@@ -413,12 +501,15 @@ async function refresh(){try{const s=await (await fetch('/api/status')).json();
  for(const k of ['webshop','proxy','mongodb']){$('p-'+k).className='pill '+(s[k]?'ok':'bad')}
  $('recipes').innerHTML=s.recipes.length?s.recipes.map(r=>`<tr><td title="${esc(r.description||'')}">${esc(r.name)}</td><td>${r.version}</td><td class="st-${r.status}">${r.status}</td><td>${r.uses||0}</td><td>${r.wins||0}</td><td>${r.lift==null?'–':Number(r.lift).toFixed(2)}</td></tr>`).join(''):'<tr><td colspan="6" style="color:var(--dim)">No recipes yet. Teach one.</td></tr>';
 }catch(e){}}
-async function loadTasks(){const t=await (await fetch('/api/tasks')).json();
- const opts=Object.entries(t).map(([n,txt])=>`<option value="${n}">fixed_${n} · ${esc(txt).slice(0,90)}</option>`).join('');
- $('task').innerHTML=opts;$('teachTask').innerHTML=opts;$('teachTask').value='12';$('task').value='3'}
+async function loadTasks(){const site=$('site').value;const t=await (await fetch('/api/tasks?site='+site)).json();
+ const opts=Object.entries(t).map(([n,txt])=>`<option value="${n}">${site==='webshop'?'fixed_'+n+' · ':''}${esc(txt).slice(0,90)}</option>`).join('');
+ $('task').innerHTML=opts;$('teachTask').innerHTML=opts;
+ if(site==='webshop'){$('teachTask').value='12';$('task').value='3'}else{$('teachTask').value='pliers';$('task').value='hammer'}
+ $('teachTask').disabled=site==='toolshop'}
+$('site').onchange=loadTasks;
 async function post(path,body){const r=await fetch(path,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(body||{})});if(r.status===409)alert('Already running');return r}
-$('race').onclick=()=>{for(const l of ['recipe','browse']){$(l+'-log').innerHTML='';calls[l]=0;$(l+'-calls').textContent='0';$(l+'-score').className='stat score';$(l+'-score').querySelector('b').textContent='–';startTimer(l)}post('/api/race',{task:+$('task').value,show:$('show').checked})};
-$('teach').onclick=()=>{$('teach-log').innerHTML='';startTimer('teach');post('/api/teach',{task:+$('teachTask').value,show:$('show').checked})};
+$('race').onclick=()=>{for(const l of ['recipe','browse']){$(l+'-log').innerHTML='';calls[l]=0;$(l+'-calls').textContent='0';$(l+'-score').className='stat score';$(l+'-score').querySelector('b').textContent='–';startTimer(l)}post('/api/race',{site:$('site').value,task:$('site').value==='webshop'?+$('task').value:$('task').value,show:$('show').checked})};
+$('teach').onclick=()=>{$('teach-log').innerHTML='';startTimer('teach');post('/api/teach',{site:$('site').value,task:$('site').value==='webshop'?+$('teachTask').value:$('teachTask').value,show:$('show').checked})};
 $('forget').onclick=async()=>{const r=await (await post('/api/forget')).json();add('feed','atlas',`Retired ${r.retired} recipe(s) for the demo`);refresh()};
 const es=new EventSource('/events');
 es.onmessage=m=>{const e=JSON.parse(m.data);

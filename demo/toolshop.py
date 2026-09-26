@@ -98,13 +98,16 @@ def teach(store: Any, on_event: Event, *, show: bool, window: tuple[int, int, in
     """A person-like demo on the real site (search, pick the cheapest, add to cart), recorded."""
     from playwright.sync_api import sync_playwright
 
+    from scripts.webshop_eval import headed_browser
+
     HAR.parent.mkdir(exist_ok=True)
     task = instruction(TEACH_ITEM)
     _emit(on_event, "task", task)
     _emit(on_event, "record", f"Recording one run on {UI} (network traffic -> HAR, stays on this Mac)")
     with sync_playwright() as p:
         args = [f"--window-position={window[0]},{window[1]}", f"--window-size={window[2]},{window[3]}"] if window else []
-        browser = p.chromium.launch(headless=not show, slow_mo=300 if show else 0, args=args)
+        browser = p.chromium.launch(headless=not show, slow_mo=300 if show else 0,
+                                    **(headed_browser(args) if show else {"args": args}))
         ctx = browser.new_context(record_har_path=str(HAR), record_har_content="embed", no_viewport=bool(window))
         page = ctx.new_page()
         if show:

@@ -98,6 +98,25 @@ def task_text(session: str) -> str:
 # -- learn ---------------------------------------------------------------------
 
 
+def headed_browser(args: list[str]) -> dict[str, Any]:
+    """Launch options for a visible window: DEMO_BROWSER (a Chromium binary, e.g. Brave) or Playwright's own."""
+    import os
+
+    path = os.environ.get("DEMO_BROWSER")
+    return {"args": args, **({"executable_path": path} if path else {})}
+
+
+def activate_browser() -> None:
+    """macOS opens the automation browser behind other windows; raise it."""
+    import os
+    import subprocess
+
+    path = os.environ.get("DEMO_BROWSER", "")
+    app = re.search(r"([^/]+)\.app/", path).group(1) if ".app/" in path else "Google Chrome for Testing"
+    subprocess.Popen(["osascript", "-e", f'tell application "{app}" to activate'],
+                     stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+
+
 def learn(learn_task: int = 1500, *, store: Any = None, on_event: Event | None = None,
           headless: bool = True, slow_mo: int = 0, window: tuple[int, int, int, int] | None = None) -> Recipe:
     """Record one purchase headless and learn a recipe from it.
@@ -115,16 +134,14 @@ def learn(learn_task: int = 1500, *, store: Any = None, on_event: Event | None =
     _emit(on_event, "record", "Recording one purchase in a headless browser (network traffic -> HAR)")
     with sync_playwright() as p:
         args = [f"--window-position={window[0]},{window[1]}", f"--window-size={window[2]},{window[3]}"] if window else []
-        browser = p.chromium.launch(headless=headless, slow_mo=slow_mo, args=args)
+        launch = headed_browser(args) if not headless else {"args": args}
+        browser = p.chromium.launch(headless=headless, slow_mo=slow_mo, **launch)
         ctx = browser.new_context(record_har_path=str(DEMO_HAR), record_har_content="embed",
                                   no_viewport=bool(window))
         page = ctx.new_page()
-        if not headless:  # macOS opens it behind other windows
-            import subprocess
-
+        if not headless:
             page.bring_to_front()
-            subprocess.Popen(["osascript", "-e", 'tell application "Google Chrome for Testing" to activate'],
-                             stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            activate_browser()
         page.goto(f"{BASE}/{session}")
         words = re.sub(r"[^a-z0-9 ]", " ", task.split("Instruction:", 1)[1].lower()).split()
         page.fill("#search_input", " ".join(w for w in words if len(w) > 2)[:60])

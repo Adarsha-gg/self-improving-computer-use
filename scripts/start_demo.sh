@@ -21,7 +21,7 @@ if up "http://127.0.0.1:3000/fixed_0" && curl -s -m 5 "http://127.0.0.1:3000/fix
   echo "WebShop: already running"
 elif [ -d "$WEBSHOP/.venv" ]; then
   echo "WebShop: starting"
-  (cd "$WEBSHOP" && source webshop_env.sh && nohup .venv/bin/python -m web_agent_site.app --attrs >"$LOGS/webshop.log" 2>&1 &)
+  (cd "$WEBSHOP" && { [ -f webshop_env.sh ] && source webshop_env.sh; true; } && nohup .venv/bin/python -m web_agent_site.app --attrs >"$LOGS/webshop.log" 2>&1 &)
 else
   echo "WebShop: not installed at $WEBSHOP (run scripts/setup_webshop.sh); Toolshop still works"
 fi
