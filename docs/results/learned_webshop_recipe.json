@@ -1,0 +1,89 @@
+{
+ "name": "127.0.0.1:3000:search-and-select-product",
+ "kind": "api_recipe",
+ "status": "candidate",
+ "version": 1,
+ "parent_id": null,
+ "description": "Search the store and select a product matching a request, choosing applicable options.",
+ "scope": {
+  "site": "127.0.0.1:3000",
+  "task_key": "webshop"
+ },
+ "params": [
+  {
+   "name": "session_id",
+   "description": "WebShop session identifier.",
+   "example": "fixed_12"
+  },
+  {
+   "name": "search_query",
+   "description": "Product search request.",
+   "example": "looking fresh scent body lotion for dry skin and price lower"
+  }
+ ],
+ "steps": [
+  {
+   "id": "search",
+   "method": "POST",
+   "url": "http://127.0.0.1:3000/{{session_id}}",
+   "headers": {
+    "content-type": "application/x-www-form-urlencoded"
+   },
+   "body": {
+    "search_query": "{{search_query}}"
+   },
+   "body_format": "form",
+   "expect_status": 200,
+   "extract": [
+    {
+     "var": "search_context",
+     "from": "regex",
+     "path": "/item_page/[^/]+/[^/]+/([^/]+)/1/"
+    }
+   ],
+   "choose": [
+    {
+     "var": "item_id",
+     "regex": "/item_page/[^/]+/([^/]+)/",
+     "mode": "one",
+     "context": 240,
+     "max": 12
+    }
+   ]
+  },
+  {
+   "id": "item",
+   "method": "GET",
+   "url": "http://127.0.0.1:3000/item_page/{{session_id}}/{{item_id}}/{{search_context}}/1/%7B%7D",
+   "headers": {},
+   "body": null,
+   "body_format": "text",
+   "expect_status": 200,
+   "extract": [],
+   "choose": [
+    {
+     "var": "selected_options",
+     "regex": "name=\"([^\"]+)\" value=\"([^\"]+)\"",
+     "mode": "per_name",
+     "context": 240,
+     "max": 12
+    }
+   ]
+  },
+  {
+   "id": "complete",
+   "method": "POST",
+   "url": "http://127.0.0.1:3000/done/{{session_id}}/{{item_id}}/{{selected_options}}",
+   "headers": {
+    "content-type": "application/x-www-form-urlencoded"
+   },
+   "body": {},
+   "body_format": "form",
+   "expect_status": 200,
+   "extract": [],
+   "choose": []
+  }
+ ],
+ "verify": null,
+ "session": []
+}

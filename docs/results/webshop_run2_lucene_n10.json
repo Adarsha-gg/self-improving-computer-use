@@ -1,0 +1,253 @@
+{
+ "model": "gpt-5.6-terra",
+ "rows": [
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_0",
+   "reward": 1.0,
+   "seconds": 13.099606990814209,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_1",
+   "reward": 1.0,
+   "seconds": 9.272005796432495,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_2",
+   "reward": 1.0,
+   "seconds": 9.620807886123657,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_3",
+   "reward": 1.0,
+   "seconds": 5.705000162124634,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_4",
+   "reward": 1.0,
+   "seconds": 5.68795108795166,
+   "llm_calls": 2,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_5",
+   "reward": 1.0,
+   "seconds": 6.572433233261108,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_6",
+   "reward": 1.0,
+   "seconds": 6.184746026992798,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_7",
+   "reward": 1.0,
+   "seconds": 8.6320219039917,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_8",
+   "reward": 1.0,
+   "seconds": 14.49238395690918,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_9",
+   "reward": 1.0,
+   "seconds": 6.764589786529541,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_0",
+   "reward": 0.3333333333333333,
+   "seconds": 6.539985179901123,
+   "llm_calls": 3,
+   "error": null,
+   "trace": [
+    "search[blue toothbrush oral hygiene]",
+    "click[B09JT3Z6JV]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_1",
+   "reward": 0.0,
+   "seconds": 36.056063175201416,
+   "llm_calls": 15,
+   "error": "step limit",
+   "trace": [
+    "search[Blue Diamond almonds pecan gluten free pack of 12]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Back to Search]",
+    "search[Blue Diamond almonds pecan gluten free pack of 12]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[< Prev]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_2",
+   "reward": 1.0,
+   "seconds": 14.285897970199585,
+   "llm_calls": 5,
+   "error": null,
+   "trace": [
+    "search[men's black loafers rubber sole size 10.5]",
+    "click[B082MT9162]",
+    "click[select size: 10.5]",
+    "click[select color: 2005black]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_3",
+   "reward": 0.0,
+   "seconds": 40.00054335594177,
+   "llm_calls": 15,
+   "error": "step limit",
+   "trace": [
+    "search[folding storage box ottoman faux leather 60x40x40cm easy install]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[< Prev]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[< Prev]",
+    "click[Back to Search]",
+    "search[folding storage box ottoman faux leather 60x40x40cm]",
+    "click[Next >]",
+    "click[Next >]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_4",
+   "reward": 1.0,
+   "seconds": 10.646555185317993,
+   "llm_calls": 3,
+   "error": null,
+   "trace": [
+    "search[gluten free vegan plant based protein shake soy free]",
+    "click[B07FYPSNH8]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_5",
+   "reward": 0.0,
+   "seconds": 37.751070976257324,
+   "llm_calls": 15,
+   "error": "step limit",
+   "trace": [
+    "search[120 ml hair mask treatment]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[< Prev]",
+    "click[< Prev]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[< Prev]",
+    "click[Next >]",
+    "click[Back to Search]",
+    "search[120 ml hair mask treatment]",
+    "click[Next >]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_6",
+   "reward": 1.0,
+   "seconds": 9.7168550491333,
+   "llm_calls": 4,
+   "error": null,
+   "trace": [
+    "search[niuta 2 pack hair towel wrap pink dry hair]",
+    "click[B08G14B779]",
+    "click[select color: pink]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_7",
+   "reward": 0.0,
+   "seconds": 4.745012998580933,
+   "llm_calls": 1,
+   "error": "no actions",
+   "trace": []
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_8",
+   "reward": 1.0,
+   "seconds": 8.7390718460083,
+   "llm_calls": 4,
+   "error": null,
+   "trace": [
+    "search[organic hair growth serum roller set all hair types]",
+    "click[B09PY89B1S]",
+    "click[select size: 1pcs]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_9",
+   "reward": 1.0,
+   "seconds": 11.823724031448364,
+   "llm_calls": 5,
+   "error": null,
+   "trace": [
+    "search[women faux fur lined winter warm jacket coat red x-large]",
+    "click[B09KP78G37]",
+    "click[select color: red]",
+    "click[select size: x-large]",
+    "click[Buy Now]"
+   ]
+  }
+ ]
+}

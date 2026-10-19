@@ -1,0 +1,2715 @@
+{
+ "model": "gpt-5.6-terra",
+ "rows": [
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_1",
+   "reward": 0.3333333333333333,
+   "seconds": 6.611034870147705,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_2",
+   "reward": 0.5,
+   "seconds": 6.700901031494141,
+   "llm_calls": 2,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_3",
+   "reward": 1.0,
+   "seconds": 4.21702766418457,
+   "llm_calls": 2,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_4",
+   "reward": 0.3333333333333333,
+   "seconds": 6.079615831375122,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_5",
+   "reward": 1.0,
+   "seconds": 6.679747819900513,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_6",
+   "reward": 1.0,
+   "seconds": 4.217864036560059,
+   "llm_calls": 2,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_7",
+   "reward": 0.05,
+   "seconds": 6.3448569774627686,
+   "llm_calls": 2,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_8",
+   "reward": 1.0,
+   "seconds": 6.691666841506958,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_9",
+   "reward": 0.5,
+   "seconds": 7.373605966567993,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_10",
+   "reward": 0.06666666666666667,
+   "seconds": 5.174511194229126,
+   "llm_calls": 2,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_11",
+   "reward": 0.75,
+   "seconds": 9.086215257644653,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_12",
+   "reward": 1.0,
+   "seconds": 7.948985815048218,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_13",
+   "reward": 1.0,
+   "seconds": 7.746024131774902,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_14",
+   "reward": 0.25,
+   "seconds": 6.686558961868286,
+   "llm_calls": 2,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_15",
+   "reward": 0.03333333333333333,
+   "seconds": 8.154456853866577,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_16",
+   "reward": 1.0,
+   "seconds": 4.598282098770142,
+   "llm_calls": 2,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_17",
+   "reward": 1.0,
+   "seconds": 9.123422145843506,
+   "llm_calls": 2,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_18",
+   "reward": 0.3333333333333333,
+   "seconds": 12.907024145126343,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_19",
+   "reward": 1.0,
+   "seconds": 4.451987028121948,
+   "llm_calls": 2,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_20",
+   "reward": 0.04000000000000001,
+   "seconds": 14.367881059646606,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_21",
+   "reward": 1.0,
+   "seconds": 4.314854860305786,
+   "llm_calls": 2,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_22",
+   "reward": 0.03333333333333333,
+   "seconds": 5.052452087402344,
+   "llm_calls": 2,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_23",
+   "reward": 0.75,
+   "seconds": 9.000931978225708,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_24",
+   "reward": 1.0,
+   "seconds": 6.157657146453857,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_25",
+   "reward": 0.5,
+   "seconds": 9.262530088424683,
+   "llm_calls": 2,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_26",
+   "reward": 1.0,
+   "seconds": 5.605468988418579,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_27",
+   "reward": 1.0,
+   "seconds": 9.355502843856812,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_28",
+   "reward": 1.0,
+   "seconds": 10.897521257400513,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_29",
+   "reward": 1.0,
+   "seconds": 6.026752948760986,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_30",
+   "reward": 0.4,
+   "seconds": 15.429419994354248,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_31",
+   "reward": 1.0,
+   "seconds": 5.67881178855896,
+   "llm_calls": 2,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_32",
+   "reward": 0.6666666666666666,
+   "seconds": 13.209266901016235,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_33",
+   "reward": 0.4,
+   "seconds": 11.232846975326538,
+   "llm_calls": 2,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_34",
+   "reward": 1.0,
+   "seconds": 5.473424911499023,
+   "llm_calls": 2,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_35",
+   "reward": 0.25,
+   "seconds": 11.440541982650757,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_36",
+   "reward": 0.07500000000000001,
+   "seconds": 6.417176246643066,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_37",
+   "reward": 1.0,
+   "seconds": 13.910311937332153,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_38",
+   "reward": 1.0,
+   "seconds": 6.129231214523315,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_39",
+   "reward": 1.0,
+   "seconds": 5.674685955047607,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_40",
+   "reward": 1.0,
+   "seconds": 8.813859701156616,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_41",
+   "reward": 0.5,
+   "seconds": 12.536320209503174,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_42",
+   "reward": 1.0,
+   "seconds": 10.444921731948853,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_43",
+   "reward": 1.0,
+   "seconds": 10.968225002288818,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_44",
+   "reward": 1.0,
+   "seconds": 6.501940011978149,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_45",
+   "reward": 0.5,
+   "seconds": 15.039801120758057,
+   "llm_calls": 2,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_46",
+   "reward": 0.07500000000000001,
+   "seconds": 13.064655780792236,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_47",
+   "reward": 0.6666666666666666,
+   "seconds": 10.51102089881897,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_48",
+   "reward": 1.0,
+   "seconds": 7.171798944473267,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_49",
+   "reward": 0.6666666666666666,
+   "seconds": 5.22862696647644,
+   "llm_calls": 2,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_50",
+   "reward": 1.0,
+   "seconds": 22.869598150253296,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_51",
+   "reward": 0.0,
+   "seconds": 10.934736251831055,
+   "llm_calls": 2,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_52",
+   "reward": 1.0,
+   "seconds": 6.341205358505249,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_53",
+   "reward": 1.0,
+   "seconds": 9.265594005584717,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_54",
+   "reward": 0.3333333333333333,
+   "seconds": 9.638118028640747,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_55",
+   "reward": 1.0,
+   "seconds": 7.858393907546997,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_56",
+   "reward": 1.0,
+   "seconds": 8.607219934463501,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_57",
+   "reward": 1.0,
+   "seconds": 7.877115726470947,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_58",
+   "reward": 1.0,
+   "seconds": 9.523462295532227,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_59",
+   "reward": 0.2,
+   "seconds": 15.403815031051636,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_60",
+   "reward": 0.1,
+   "seconds": 8.050158023834229,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_61",
+   "reward": 1.0,
+   "seconds": 3.7538399696350098,
+   "llm_calls": 2,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_62",
+   "reward": 1.0,
+   "seconds": 6.2065489292144775,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_63",
+   "reward": 1.0,
+   "seconds": 6.288650989532471,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_64",
+   "reward": 1.0,
+   "seconds": 6.909133195877075,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_65",
+   "reward": 0.5,
+   "seconds": 9.995106935501099,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_66",
+   "reward": 1.0,
+   "seconds": 10.786529064178467,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_67",
+   "reward": 1.0,
+   "seconds": 4.750409841537476,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_68",
+   "reward": 0.0,
+   "seconds": 10.690426111221313,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_69",
+   "reward": 0.75,
+   "seconds": 10.592643976211548,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_70",
+   "reward": 1.0,
+   "seconds": 6.620068073272705,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_71",
+   "reward": 0.5,
+   "seconds": 12.73710823059082,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_72",
+   "reward": 0.25,
+   "seconds": 12.069209814071655,
+   "llm_calls": 2,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_73",
+   "reward": 0.6666666666666666,
+   "seconds": 5.95249605178833,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_74",
+   "reward": 0.5,
+   "seconds": 8.192696809768677,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_75",
+   "reward": 0.3333333333333333,
+   "seconds": 12.314183712005615,
+   "llm_calls": 2,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_76",
+   "reward": 0.0,
+   "seconds": 1.9277398586273193,
+   "llm_calls": 1,
+   "error": "step search returned HTTP 404, expected 200"
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_77",
+   "reward": 1.0,
+   "seconds": 5.277467966079712,
+   "llm_calls": 2,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_78",
+   "reward": 1.0,
+   "seconds": 7.385946989059448,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_79",
+   "reward": 1.0,
+   "seconds": 10.269489049911499,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_80",
+   "reward": 0.8,
+   "seconds": 10.977657794952393,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_81",
+   "reward": 0.3333333333333333,
+   "seconds": 7.429323673248291,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_82",
+   "reward": 1.0,
+   "seconds": 7.198585033416748,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_83",
+   "reward": 1.0,
+   "seconds": 7.199810981750488,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_84",
+   "reward": 1.0,
+   "seconds": 4.387549161911011,
+   "llm_calls": 2,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_85",
+   "reward": 0.75,
+   "seconds": 8.395948886871338,
+   "llm_calls": 2,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_86",
+   "reward": 0.0,
+   "seconds": 7.770082950592041,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_87",
+   "reward": 1.0,
+   "seconds": 12.528254985809326,
+   "llm_calls": 2,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_88",
+   "reward": 0.5,
+   "seconds": 7.9285888671875,
+   "llm_calls": 2,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_89",
+   "reward": 1.0,
+   "seconds": 6.734516143798828,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_90",
+   "reward": 1.0,
+   "seconds": 8.558589935302734,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_91",
+   "reward": 0.6666666666666666,
+   "seconds": 5.595656871795654,
+   "llm_calls": 2,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_92",
+   "reward": 1.0,
+   "seconds": 7.136060953140259,
+   "llm_calls": 2,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_93",
+   "reward": 1.0,
+   "seconds": 8.225003957748413,
+   "llm_calls": 2,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_94",
+   "reward": 1.0,
+   "seconds": 19.343326091766357,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_95",
+   "reward": 1.0,
+   "seconds": 7.0191569328308105,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_96",
+   "reward": 0.6666666666666666,
+   "seconds": 6.455183744430542,
+   "llm_calls": 2,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_97",
+   "reward": 0.8,
+   "seconds": 10.238479137420654,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_98",
+   "reward": 1.0,
+   "seconds": 25.928285121917725,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_99",
+   "reward": 0.3333333333333333,
+   "seconds": 9.900777101516724,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_100",
+   "reward": 1.0,
+   "seconds": 4.584305286407471,
+   "llm_calls": 2,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_101",
+   "reward": 1.0,
+   "seconds": 4.863432168960571,
+   "llm_calls": 2,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_102",
+   "reward": 0.75,
+   "seconds": 12.261579990386963,
+   "llm_calls": 2,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_103",
+   "reward": 0.3333333333333333,
+   "seconds": 5.060101747512817,
+   "llm_calls": 2,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_104",
+   "reward": 0.75,
+   "seconds": 11.51542592048645,
+   "llm_calls": 3,
+   "error": null
+  },
+  {
+   "arm": "recipe",
+   "session": "recipe_fixed_105",
+   "reward": 0.5,
+   "seconds": 5.459447145462036,
+   "llm_calls": 2,
+   "error": null
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_1",
+   "reward": 0.3333333333333333,
+   "seconds": 13.377899169921875,
+   "llm_calls": 3,
+   "error": null,
+   "trace": [
+    "search[underwater photography backdrop 6 x 4 feet]",
+    "click[B07T48V1Z1]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_2",
+   "reward": 0.5,
+   "seconds": 21.643168926239014,
+   "llm_calls": 7,
+   "error": null,
+   "trace": [
+    "search[high quality perfume atomizer bottle easy to carry 1 color]",
+    "click[B098PN13NS]",
+    "click[Attributes]",
+    "click[< Prev]",
+    "click[Features]",
+    "click[< Prev]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_3",
+   "reward": 1.0,
+   "seconds": 6.032420635223389,
+   "llm_calls": 3,
+   "error": null,
+   "trace": [
+    "search[qivynsry filter carrying case]",
+    "click[B08G8DY2LH]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_4",
+   "reward": 0.0,
+   "seconds": 40.516648292541504,
+   "llm_calls": 15,
+   "error": "step limit",
+   "trace": [
+    "search[9 drawer dresser bronze finish]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[< Prev]",
+    "click[< Prev]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Back to Search]",
+    "search[9 drawer dresser bronze finish]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_5",
+   "reward": 1.0,
+   "seconds": 15.695850133895874,
+   "llm_calls": 5,
+   "error": null,
+   "trace": [
+    "search[blue small nylon spandex shorts]",
+    "click[B075DL8NTG]",
+    "click[select color: blue]",
+    "click[select size: small]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_6",
+   "reward": 1.0,
+   "seconds": 7.737804889678955,
+   "llm_calls": 3,
+   "error": null,
+   "trace": [
+    "search[cotton candy baby shower]",
+    "click[B01CU5Y0PS]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_7",
+   "reward": 0.0,
+   "seconds": 44.4045147895813,
+   "llm_calls": 15,
+   "error": "step limit",
+   "trace": [
+    "search[soy wax candle white sage 14 oz]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[< Prev]",
+    "click[Back to Search]",
+    "search[soy wax candle white sage 14 oz]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[< Prev]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_8",
+   "reward": 1.0,
+   "seconds": 8.916968822479248,
+   "llm_calls": 4,
+   "error": null,
+   "trace": [
+    "search[men's slippers size 8 durable under $60]",
+    "click[B07GCY6BW5]",
+    "click[select size: 8]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_9",
+   "reward": 1.0,
+   "seconds": 11.982715129852295,
+   "llm_calls": 5,
+   "error": null,
+   "trace": [
+    "search[white women's high waist bell-bottom pants]",
+    "click[B09PJ72WM1]",
+    "click[select color: white]",
+    "click[select size: x-large]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_10",
+   "reward": 0.06666666666666667,
+   "seconds": 9.262559175491333,
+   "llm_calls": 3,
+   "error": null,
+   "trace": [
+    "search[fluoride free toothpaste fresh breath]",
+    "click[B09Q81CVKP]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_11",
+   "reward": 0.0,
+   "seconds": 47.90198993682861,
+   "llm_calls": 15,
+   "error": "step limit",
+   "trace": [
+    "search[flats ethylene vinyl tan]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Back to Search]",
+    "search[ethylene vinyl flats tan]",
+    "click[B08BXTRTTF]",
+    "click[Back to Search]",
+    "search[ethylene vinyl flats tan size 9.5 narrow]",
+    "click[B08G1B3LFJ]",
+    "click[select size: 9.5 narrow]",
+    "click[select color: tan leather metallic synthetic]",
+    "click[Attributes]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_12",
+   "reward": 1.0,
+   "seconds": 11.375655889511108,
+   "llm_calls": 4,
+   "error": null,
+   "trace": [
+    "search[electric pink zebra mules clogs ethylene vinyl]",
+    "click[B0834QQR5F]",
+    "click[select color: electric pink zebra]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_13",
+   "reward": 1.0,
+   "seconds": 15.800874948501587,
+   "llm_calls": 6,
+   "error": null,
+   "trace": [
+    "search[micellar makeup remover wipes 25 pack sulfate free]",
+    "click[B01M7TXD6R]",
+    "click[Attributes]",
+    "click[< Prev]",
+    "click[select size: 25 count (pack of 1)]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_14",
+   "reward": 0.0,
+   "seconds": 41.007981061935425,
+   "llm_calls": 15,
+   "error": "step limit",
+   "trace": [
+    "search[six drawer natural walnut dresser bronze finishes]",
+    "click[B09LYNSZ9Y]",
+    "click[Attributes]",
+    "click[< Prev]",
+    "click[Attributes]",
+    "click[< Prev]",
+    "click[Attributes]",
+    "click[< Prev]",
+    "click[Attributes]",
+    "click[< Prev]",
+    "click[Attributes]",
+    "click[< Prev]",
+    "click[< Prev]",
+    "click[B09LC4LJJW]",
+    "click[Attributes]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_15",
+   "reward": 0.0,
+   "seconds": 47.20553398132324,
+   "llm_calls": 15,
+   "error": "step limit",
+   "trace": [
+    "search[low fat orange mousse cookies]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[< Prev]",
+    "click[< Prev]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Back to Search]",
+    "search[low fat orange mousse cookies]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_16",
+   "reward": 0.3333333333333333,
+   "seconds": 17.15796995162964,
+   "llm_calls": 7,
+   "error": null,
+   "trace": [
+    "search[certified organic non GMO baby food jar]",
+    "click[B07VGP54WV]",
+    "click[Features]",
+    "click[< Prev]",
+    "click[Attributes]",
+    "click[< Prev]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_17",
+   "reward": 0.5,
+   "seconds": 6.462439060211182,
+   "llm_calls": 3,
+   "error": null,
+   "trace": [
+    "search[non-toxic refillable lip gloss tubes bag]",
+    "click[B09KGD5C6C]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_18",
+   "reward": 0.0,
+   "seconds": 43.691853046417236,
+   "llm_calls": 15,
+   "error": "step limit",
+   "trace": [
+    "search[pink body scrub dry skin]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[< Prev]",
+    "click[< Prev]",
+    "click[< Prev]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[< Prev]",
+    "click[B08W7T37HQ]",
+    "click[Back to Search]",
+    "search[pink body scrub dry skin]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_19",
+   "reward": 1.0,
+   "seconds": 6.420088052749634,
+   "llm_calls": 3,
+   "error": null,
+   "trace": [
+    "search[birthday cake topper]",
+    "click[B08GLK4PGV]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_20",
+   "reward": 0.06,
+   "seconds": 19.17361283302307,
+   "llm_calls": 6,
+   "error": null,
+   "trace": [
+    "search[95% cotton 5% polyester black long sleeve]",
+    "click[Next >]",
+    "click[B08BFB54TR]",
+    "click[select color: 69# black]",
+    "click[select size: medium]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_21",
+   "reward": 0.0,
+   "seconds": 45.16150403022766,
+   "llm_calls": 15,
+   "error": "step limit",
+   "trace": [
+    "search[height adjustable mid century crystal chandelier living room gold 23.6]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[< Prev]",
+    "click[< Prev]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[< Prev]",
+    "click[Next >]",
+    "click[Back to Search]",
+    "search[height adjustable mid century crystal chandelier gold 23.6 living room]",
+    "click[Next >]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_22",
+   "reward": 0.0,
+   "seconds": 41.63913130760193,
+   "llm_calls": 15,
+   "error": "step limit",
+   "trace": [
+    "search[unscented sunscreen lotion dry skin]",
+    "click[B003156NH0]",
+    "click[Attributes]",
+    "click[Back to Search]",
+    "search[unscented sunscreen lotion dry skin]",
+    "click[B003156NH0]",
+    "click[Attributes]",
+    "click[Back to Search]",
+    "search[unscented sunscreen lotion dry skin]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Back to Search]",
+    "search[unscented sunscreen lotion dry skin]",
+    "click[Next >]",
+    "click[Next >]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_23",
+   "reward": 0.75,
+   "seconds": 14.133912086486816,
+   "llm_calls": 5,
+   "error": null,
+   "trace": [
+    "search[basic nylon high waist pants xx-large 37 inch inseam]",
+    "click[B07R9M1GJM]",
+    "click[select size: xx-large | 37\" inseam]",
+    "click[select color: basic nylon_black]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_24",
+   "reward": 1.0,
+   "seconds": 11.284559965133667,
+   "llm_calls": 5,
+   "error": null,
+   "trace": [
+    "search[Jay Franco Disney Minnie Mouse twin bed set super soft]",
+    "click[B07RT28DLG]",
+    "click[select size: twin]",
+    "click[select color: minnie mouse]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_25",
+   "reward": 0.5,
+   "seconds": 11.872164011001587,
+   "llm_calls": 4,
+   "error": null,
+   "trace": [
+    "search[pink cupcake toppers cupcake picks baby shower birthday party supplies]",
+    "click[Next >]",
+    "click[B09K7DLV1N]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_26",
+   "reward": 1.0,
+   "seconds": 9.08413314819336,
+   "llm_calls": 4,
+   "error": null,
+   "trace": [
+    "search[iPhone 13 camera lens protector aluminum alloy pink]",
+    "click[B09JBL4FQG]",
+    "click[select color: pink]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_27",
+   "reward": 0.6666666666666666,
+   "seconds": 8.081783056259155,
+   "llm_calls": 3,
+   "error": null,
+   "trace": [
+    "search[Cimota PU leather dining chairs set of 2]",
+    "click[B09P4WGX3Z]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_28",
+   "reward": 0.0,
+   "seconds": 42.87070894241333,
+   "llm_calls": 15,
+   "error": "step limit",
+   "trace": [
+    "search[peaceful purple makeup brush set eyeshadow]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[< Prev]",
+    "click[Next >]",
+    "click[Back to Search]",
+    "search[peaceful purple eyeshadow makeup brush set]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_29",
+   "reward": 0.6666666666666666,
+   "seconds": 18.587568998336792,
+   "llm_calls": 7,
+   "error": null,
+   "trace": [
+    "search[caffeine free raspberry ice drink mix]",
+    "click[B003DNL9XI]",
+    "click[Attributes]",
+    "click[< Prev]",
+    "click[Attributes]",
+    "click[< Prev]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_30",
+   "reward": 0.0,
+   "seconds": 44.97825884819031,
+   "llm_calls": 15,
+   "error": "step limit",
+   "trace": [
+    "search[women open toe sandals leather sole green]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Back to Search]",
+    "search[women's open toe sandals leather sole green]",
+    "click[Next >]",
+    "click[Back to Search]",
+    "search[women's green open toe sandals leather sole]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_31",
+   "reward": 1.0,
+   "seconds": 7.502556800842285,
+   "llm_calls": 3,
+   "error": null,
+   "trace": [
+    "search[gluten free vegan plant based protein shake soy free]",
+    "click[B07FYPSNH8]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_32",
+   "reward": 0.6666666666666666,
+   "seconds": 10.903613090515137,
+   "llm_calls": 4,
+   "error": null,
+   "trace": [
+    "search[gray living room pillows]",
+    "click[B09881NJP2]",
+    "click[select color: red black grey abstract art modern]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_33",
+   "reward": 1.0,
+   "seconds": 11.079128980636597,
+   "llm_calls": 5,
+   "error": null,
+   "trace": [
+    "search[brown upholstered faux leather footrest stool 100x42x45cm]",
+    "click[B09FQ19M1N]",
+    "click[select size: 100x42x45cm]",
+    "click[select color: brown]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_34",
+   "reward": 1.0,
+   "seconds": 13.401729106903076,
+   "llm_calls": 7,
+   "error": null,
+   "trace": [
+    "search[Casio Exilim EX-Z120 7 batteries included]",
+    "click[B0009XQPHU]",
+    "click[Features]",
+    "click[< Prev]",
+    "click[Attributes]",
+    "click[< Prev]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_35",
+   "reward": 0.0,
+   "seconds": 19.15438199043274,
+   "llm_calls": 7,
+   "error": "no actions",
+   "trace": [
+    "search[orange cargo pants hiking casual]",
+    "click[B09FK8T7FP]",
+    "click[Back to Search]",
+    "search[orange cargo pants hiking casual under $40]",
+    "click[B08GC85N6M]",
+    "click[Back to Search]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_36",
+   "reward": 0.0,
+   "seconds": 5.103685140609741,
+   "llm_calls": 1,
+   "error": "no actions",
+   "trace": []
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_37",
+   "reward": 0.5,
+   "seconds": 9.775398015975952,
+   "llm_calls": 4,
+   "error": null,
+   "trace": [
+    "search[beauty ice contour mold skin care tool pink]",
+    "click[B09SQ6G73Z]",
+    "click[select color: pink for face]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_38",
+   "reward": 0.0,
+   "seconds": 41.79786396026611,
+   "llm_calls": 15,
+   "error": "step limit",
+   "trace": [
+    "search[gmo free low carb dessert syrup variety pack]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[< Prev]",
+    "click[< Prev]",
+    "click[< Prev]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Back to Search]",
+    "search[gmo free low carb dessert syrup variety pack]",
+    "click[Next >]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_39",
+   "reward": 1.0,
+   "seconds": 9.394218921661377,
+   "llm_calls": 4,
+   "error": null,
+   "trace": [
+    "search[organic hair growth serum roller set all hair types]",
+    "click[B09PY89B1S]",
+    "click[select size: 1pcs]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_40",
+   "reward": 0.0,
+   "seconds": 54.32348418235779,
+   "llm_calls": 15,
+   "error": "step limit",
+   "trace": [
+    "search[concealer dark circles sassy]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[< Prev]",
+    "click[Back to Search]",
+    "search[concealer dark circles sassy]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[< Prev]",
+    "click[< Prev]",
+    "click[Next >]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_41",
+   "reward": 1.0,
+   "seconds": 44.020857095718384,
+   "llm_calls": 14,
+   "error": null,
+   "trace": [
+    "search[high waisted yoga pants heather gray large]",
+    "click[B09Q8W3H11]",
+    "click[< Prev]",
+    "click[Next >]",
+    "click[< Prev]",
+    "click[B09Q8W3H11]",
+    "click[Back to Search]",
+    "search[high waisted yoga pants heather gray large]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[B09PNBK8F1]",
+    "click[select color: gray]",
+    "click[select size: large]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_42",
+   "reward": 1.0,
+   "seconds": 12.837687969207764,
+   "llm_calls": 5,
+   "error": null,
+   "trace": [
+    "search[men black loafers rubber sole size 10.5]",
+    "click[B082MT9162]",
+    "click[select size: 10.5]",
+    "click[select color: 2005black]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_43",
+   "reward": 0.0,
+   "seconds": 38.50096607208252,
+   "llm_calls": 15,
+   "error": "step limit",
+   "trace": [
+    "search[folding storage box ottoman faux leather 60x40x40cm]",
+    "click[Next >]",
+    "click[< Prev]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Back to Search]",
+    "search[folding storage box ottoman faux leather 60x40x40cm]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[< Prev]",
+    "click[Next >]",
+    "click[Next >]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_44",
+   "reward": 0.0,
+   "seconds": 58.23890781402588,
+   "llm_calls": 15,
+   "error": "step limit",
+   "trace": [
+    "search[heavy duty folding table black granite]",
+    "click[B09BK2WGGX]",
+    "click[select color: black granite]",
+    "click[select color: black granite]",
+    "click[select color: black granite]",
+    "click[select color: black granite]",
+    "click[select color: black granite]",
+    "click[select color: black granite]",
+    "click[select size: 18\"x48\"]",
+    "click[select color: black granite]",
+    "click[select color: black granite]",
+    "click[select color: black granite]",
+    "click[select color: black granite]",
+    "click[select color: black granite]",
+    "click[select color: black granite]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_45",
+   "reward": 0.0,
+   "seconds": 35.27427315711975,
+   "llm_calls": 15,
+   "error": "step limit",
+   "trace": [
+    "search[certified organic plant based green tea lip balm]",
+    "click[Next >]",
+    "click[< Prev]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Back to Search]",
+    "search[certified organic plant based green tea lip balm]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_46",
+   "reward": 0.75,
+   "seconds": 23.43890905380249,
+   "llm_calls": 8,
+   "error": null,
+   "trace": [
+    "search[black body scrub dead dry skin]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[B082NP8ZFP]",
+    "click[select color: black]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_47",
+   "reward": 0.6666666666666666,
+   "seconds": 8.921088933944702,
+   "llm_calls": 3,
+   "error": null,
+   "trace": [
+    "search[multi-colored blackout window film]",
+    "click[B09MCXBFW1]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_48",
+   "reward": 1.0,
+   "seconds": 9.494203805923462,
+   "llm_calls": 4,
+   "error": null,
+   "trace": [
+    "search[grey 3-piece faux leather tufted sectional sofa]",
+    "click[B091SV7HJ7]",
+    "click[select color: grey]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_49",
+   "reward": 0.6666666666666666,
+   "seconds": 7.473269939422607,
+   "llm_calls": 3,
+   "error": null,
+   "trace": [
+    "search[wireless fast charger iPhone]",
+    "click[B083B9HB6Q]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_50",
+   "reward": 0.0,
+   "seconds": 50.358240842819214,
+   "llm_calls": 15,
+   "error": "step limit",
+   "trace": [
+    "search[floral window curtain 52x72 skulllop3455]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[< Prev]",
+    "click[B09DPBQXC3]",
+    "click[Back to Search]",
+    "search[floral window curtain skulllop3455 52x72]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[< Prev]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_51",
+   "reward": 0.0,
+   "seconds": 40.67961025238037,
+   "llm_calls": 15,
+   "error": "step limit",
+   "trace": [
+    "search[grey 35 x 20 x 29 home desk easy to clean under $90]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[< Prev]",
+    "click[Next >]",
+    "click[< Prev]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[< Prev]",
+    "click[< Prev]",
+    "click[Next >]",
+    "click[Back to Search]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_52",
+   "reward": 1.0,
+   "seconds": 8.765689849853516,
+   "llm_calls": 4,
+   "error": null,
+   "trace": [
+    "search[keto friendly old world kielbasa rope sausage]",
+    "click[B08GYF3H6N]",
+    "click[select flavor name: old world style]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_53",
+   "reward": 1.0,
+   "seconds": 12.205860137939453,
+   "llm_calls": 4,
+   "error": null,
+   "trace": [
+    "search[old fashioned rope sausage gluten free]",
+    "click[B08GYF3H6N]",
+    "click[select flavor name: old world style]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_54",
+   "reward": 1.0,
+   "seconds": 7.659773111343384,
+   "llm_calls": 4,
+   "error": null,
+   "trace": [
+    "search[mauve travel size cosmetic bag]",
+    "click[B08Z8LYMMX]",
+    "click[select color: mauve]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_55",
+   "reward": 1.0,
+   "seconds": 11.705641031265259,
+   "llm_calls": 5,
+   "error": null,
+   "trace": [
+    "search[men red button down casual shirt large slim fit]",
+    "click[B092FPQLQK]",
+    "click[select size: large]",
+    "click[select color: red]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_56",
+   "reward": 1.0,
+   "seconds": 19.314286947250366,
+   "llm_calls": 7,
+   "error": null,
+   "trace": [
+    "search[Levi Strauss & Co men's carpenter jeans machine washable]",
+    "click[B01H7ENCMO]",
+    "click[select special size: standard]",
+    "click[Attributes]",
+    "click[< Prev]",
+    "click[select size: 28w x 30l]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_57",
+   "reward": 0.0,
+   "seconds": 46.78193497657776,
+   "llm_calls": 15,
+   "error": "step limit",
+   "trace": [
+    "search[gluten free non gmo fig bar variety pack 7]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Back to Search]",
+    "search[gluten free non gmo fig bar variety pack 7]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_58",
+   "reward": 0.0,
+   "seconds": 42.19060397148132,
+   "llm_calls": 15,
+   "error": "step limit",
+   "trace": [
+    "search[Yongqiang 26 set of 4 metal bar height stools black dining room]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[< Prev]",
+    "click[< Prev]",
+    "click[Next >]",
+    "click[B09PG21B11]",
+    "click[Back to Search]",
+    "search[Yongqiang 26 inch set of 4 metal bar height stools black dining room]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[< Prev]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_59",
+   "reward": 0.0,
+   "seconds": 41.472025871276855,
+   "llm_calls": 15,
+   "error": "step limit",
+   "trace": [
+    "search[22 x 22 double sided throw pillow cases multi 02]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[B01M3STRZZ]",
+    "click[< Prev]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[< Prev]",
+    "click[< Prev]",
+    "click[Next >]",
+    "click[Back to Search]",
+    "search[22 x 22 double sided throw pillow cases multi 02]",
+    "click[Next >]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_60",
+   "reward": 0.1,
+   "seconds": 11.26662015914917,
+   "llm_calls": 4,
+   "error": null,
+   "trace": [
+    "search[black knee high mid-calf]",
+    "click[B00L4QIMIQ]",
+    "click[select color: black]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_61",
+   "reward": 0.0,
+   "seconds": 41.80414319038391,
+   "llm_calls": 15,
+   "error": "step limit",
+   "trace": [
+    "search[teeth whitening device kit sensitive teeth]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Back to Search]",
+    "search[teeth whitening device kit sensitive teeth]",
+    "click[B08KGN21R3]",
+    "click[Back to Search]",
+    "search[teeth whitening device kit sensitive teeth]",
+    "click[B08KGN21R3]",
+    "click[Description]",
+    "click[Back to Search]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_62",
+   "reward": 1.0,
+   "seconds": 11.320405960083008,
+   "llm_calls": 4,
+   "error": null,
+   "trace": [
+    "search[kosher certified irish fortune cookies halloween]",
+    "click[B01A99GE8I]",
+    "click[select pattern name: halloween]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_63",
+   "reward": 1.0,
+   "seconds": 10.566202163696289,
+   "llm_calls": 5,
+   "error": null,
+   "trace": [
+    "search[women faux fur lined winter warm jacket coat red x-large]",
+    "click[B09KP78G37]",
+    "click[select color: red]",
+    "click[select size: x-large]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_64",
+   "reward": 1.0,
+   "seconds": 14.457430839538574,
+   "llm_calls": 5,
+   "error": null,
+   "trace": [
+    "search[official Cleveland University drawstring shorts charcoal small machine washable]",
+    "click[B09HX5CD2D]",
+    "click[select color: heather charcoal]",
+    "click[select size: small]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_65",
+   "reward": 0.0,
+   "seconds": 40.98818516731262,
+   "llm_calls": 15,
+   "error": "step limit",
+   "trace": [
+    "search[contemporary privacy window panel 52 x 90]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[< Prev]",
+    "click[< Prev]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Back to Search]",
+    "search[contemporary privacy panel 52 x 90]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_66",
+   "reward": 0.0,
+   "seconds": 39.768409967422485,
+   "llm_calls": 12,
+   "error": "no actions",
+   "trace": [
+    "search[34x72 inch round table protector 2 mm stainless steel]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[< Prev]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[< Prev]",
+    "click[B01H9H46Q0]",
+    "click[Back to Search]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_67",
+   "reward": 0.6666666666666666,
+   "seconds": 9.082766056060791,
+   "llm_calls": 3,
+   "error": null,
+   "trace": [
+    "search[niuta 2 pack hair towel wrap dry hair pink]",
+    "click[B08G14B779]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_68",
+   "reward": 1.0,
+   "seconds": 32.082168102264404,
+   "llm_calls": 9,
+   "error": null,
+   "trace": [
+    "search[heavy duty table pad stainless steel easy to clean new version clear 1.5 mm 39.4 94.5]",
+    "click[B07GGXP2FC]",
+    "click[select size: 39.4 x 94.5 inches]",
+    "click[select size: 39.4 x 94.5 inches]",
+    "click[select size: 39.4 x 94.5 inches]",
+    "click[select size: 39.4 x 94.5 inches]",
+    "click[select size: 39.4 x 94.5 inches]",
+    "click[select color: new version clear 1.5mm]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_69",
+   "reward": 0.0,
+   "seconds": 39.98875093460083,
+   "llm_calls": 15,
+   "error": "step limit",
+   "trace": [
+    "search[purple women's boots size 8 rubber sole]",
+    "click[B09BHZ3QKR]",
+    "click[Back to Search]",
+    "search[purple women's boots size 8 rubber sole]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[B09L6CK6LS]",
+    "click[Attributes]",
+    "click[< Prev]",
+    "click[Attributes]",
+    "click[Back to Search]",
+    "search[purple women's boots size 8 rubber sole]",
+    "click[B08DNCWVBJ]",
+    "click[Attributes]",
+    "click[< Prev]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_70",
+   "reward": 1.0,
+   "seconds": 13.393653631210327,
+   "llm_calls": 5,
+   "error": null,
+   "trace": [
+    "search[pm6006 cd player aaa batteries]",
+    "click[B01FWM4A2O]",
+    "click[select model: pm6006]",
+    "click[select style: cd player]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_71",
+   "reward": 0.75,
+   "seconds": 19.919144868850708,
+   "llm_calls": 8,
+   "error": null,
+   "trace": [
+    "search[52 x 84 snowman curtains]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[B09LCM3NKN]",
+    "click[select size: 52x84inx2]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_72",
+   "reward": 0.0,
+   "seconds": 47.282309770584106,
+   "llm_calls": 15,
+   "error": "step limit",
+   "trace": [
+    "search[cruelty free deodorant woody scent 1.6 oz]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[< Prev]",
+    "click[< Prev]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Back to Search]",
+    "search[cruelty free deodorant woody 1.6 oz]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_73",
+   "reward": 0.6666666666666666,
+   "seconds": 10.196937084197998,
+   "llm_calls": 4,
+   "error": null,
+   "trace": [
+    "search[skull king barber cape hook sucker]",
+    "click[B08XJ2PT2C]",
+    "click[select color: skull king 11]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_74",
+   "reward": 0.0,
+   "seconds": 43.93777585029602,
+   "llm_calls": 15,
+   "error": "step limit",
+   "trace": [
+    "search[white barstools]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[< Prev]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[< Prev]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[< Prev]",
+    "click[< Prev]",
+    "click[Next >]",
+    "click[< Prev]",
+    "click[Next >]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_75",
+   "reward": 0.6666666666666666,
+   "seconds": 6.622951030731201,
+   "llm_calls": 3,
+   "error": null,
+   "trace": [
+    "search[pendant lights ceiling living room]",
+    "click[B096X33977]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_76",
+   "reward": 0.0,
+   "seconds": 43.28120708465576,
+   "llm_calls": 15,
+   "error": "step limit",
+   "trace": [
+    "search[high speed 12v ac dc adapter output protection]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[< Prev]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Back to Search]",
+    "search[high speed 12v ac dc adapter output protection]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_77",
+   "reward": 1.0,
+   "seconds": 6.225614070892334,
+   "llm_calls": 3,
+   "error": null,
+   "trace": [
+    "search[hyaluronic acid deep conditioner dry hair smoothness]",
+    "click[B09K8D4JRX]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_78",
+   "reward": 1.0,
+   "seconds": 18.364097118377686,
+   "llm_calls": 6,
+   "error": null,
+   "trace": [
+    "search[white iPhone 12 case American flag wireless charging]",
+    "click[B08SJLZD59]",
+    "click[select color: white]",
+    "click[Features]",
+    "click[< Prev]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_79",
+   "reward": 0.3333333333333333,
+   "seconds": 14.202579259872437,
+   "llm_calls": 5,
+   "error": null,
+   "trace": [
+    "search[blue toothbrush oral hygiene]",
+    "click[Next >]",
+    "click[B09MVMN9P7]",
+    "click[select size: l]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_80",
+   "reward": 0.0,
+   "seconds": 2.968317747116089,
+   "llm_calls": 1,
+   "error": "no actions",
+   "trace": []
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_81",
+   "reward": 0.0,
+   "seconds": 33.956463098526,
+   "llm_calls": 15,
+   "error": "step limit",
+   "trace": [
+    "search[women winter warm ankle boots size 7.5]",
+    "click[B09DJQ46QZ]",
+    "click[Back to Search]",
+    "search[women winter warm ankle boots size 7.5 under $40]",
+    "click[B09DJQ46QZ]",
+    "click[Back to Search]",
+    "search[women winter warm ankle boots size 7.5 under $40]",
+    "click[B09DJQ46QZ]",
+    "click[Back to Search]",
+    "search[women winter warm ankle boots size 7.5 under $40]",
+    "click[B09DJQ46QZ]",
+    "click[Back to Search]",
+    "search[women winter warm ankle boots size 7.5 under $40]",
+    "click[B09DJQ46QZ]",
+    "click[Back to Search]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_82",
+   "reward": 0.0,
+   "seconds": 39.06810402870178,
+   "llm_calls": 15,
+   "error": "step limit",
+   "trace": [
+    "search[gluten-free nori flakes]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[< Prev]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Back to Search]",
+    "search[gluten free nori flakes]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_83",
+   "reward": 1.0,
+   "seconds": 33.269895792007446,
+   "llm_calls": 13,
+   "error": null,
+   "trace": [
+    "search[caffeine free raspberry ice drink mix]",
+    "click[B003DNL9XI]",
+    "click[Attributes]",
+    "click[< Prev]",
+    "click[Attributes]",
+    "click[Back to Search]",
+    "search[caffeine free raspberry ice flavored drink mix]",
+    "click[B003DNL9XI]",
+    "click[Attributes]",
+    "click[< Prev]",
+    "click[select flavor name: raspberry ice]",
+    "click[select size: 1.3 ounce (pack of 4)]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_84",
+   "reward": 1.0,
+   "seconds": 7.573365926742554,
+   "llm_calls": 3,
+   "error": null,
+   "trace": [
+    "search[long lasting perfume]",
+    "click[B09GMFB8WS]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_85",
+   "reward": 0.75,
+   "seconds": 7.575132369995117,
+   "llm_calls": 3,
+   "error": null,
+   "trace": [
+    "search[double sided hair extensions]",
+    "click[B07TTC374M]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_86",
+   "reward": 0.0,
+   "seconds": 29.611462116241455,
+   "llm_calls": 10,
+   "error": "no actions",
+   "trace": [
+    "search[black natural hair styling easy to use]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[< Prev]",
+    "click[Back to Search]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_87",
+   "reward": 1.0,
+   "seconds": 6.087190866470337,
+   "llm_calls": 3,
+   "error": null,
+   "trace": [
+    "search[35 quart top mount pullout kitchen waste container easy install 1.63 inch wood frame cabinet]",
+    "click[B00KXDW4EE]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_88",
+   "reward": 0.0,
+   "seconds": 11.188923120498657,
+   "llm_calls": 5,
+   "error": "no actions",
+   "trace": [
+    "search[cell phone signal booster high speed]",
+    "click[B0813C1C4J]",
+    "click[Attributes]",
+    "click[Back to Search]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_89",
+   "reward": 0.0,
+   "seconds": 38.67079401016235,
+   "llm_calls": 15,
+   "error": "step limit",
+   "trace": [
+    "search[Blue Diamond almonds pecan gluten free pack of 12]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Back to Search]",
+    "search[Blue Diamond almonds pecan gluten free pack of 12]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_90",
+   "reward": 0.6666666666666666,
+   "seconds": 18.091474294662476,
+   "llm_calls": 7,
+   "error": null,
+   "trace": [
+    "search[120 ml hair mask treatment]",
+    "click[B074VM9ZB6]",
+    "click[Back to Search]",
+    "search[120 ml hair mask treatment]",
+    "click[Next >]",
+    "click[B08FMK1ZRN]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_91",
+   "reward": 0.6666666666666666,
+   "seconds": 8.10506296157837,
+   "llm_calls": 3,
+   "error": null,
+   "trace": [
+    "search[bookshelf living room]",
+    "click[B094NPHYFP]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_92",
+   "reward": 1.0,
+   "seconds": 13.206717014312744,
+   "llm_calls": 3,
+   "error": null,
+   "trace": [
+    "search[dual band computer accessories]",
+    "click[B09PB9NGBV]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_93",
+   "reward": 0.0,
+   "seconds": 3.886544942855835,
+   "llm_calls": 1,
+   "error": "no actions",
+   "trace": []
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_94",
+   "reward": 0.0,
+   "seconds": 43.73775792121887,
+   "llm_calls": 15,
+   "error": "step limit",
+   "trace": [
+    "search[225ZF-4 full mattress box spring set fully assembled]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Back to Search]",
+    "search[225zf-4 full mattress box spring fully assembled]",
+    "click[Next >]",
+    "click[Next >]",
+    "click[Back to Search]",
+    "search[225zf-4 full mattress box spring set fully assembled]",
+    "click[Next >]",
+    "click[Next >]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_95",
+   "reward": 0.6666666666666666,
+   "seconds": 28.193086862564087,
+   "llm_calls": 9,
+   "error": null,
+   "trace": [
+    "search[clip set hair extensions stainless steel]",
+    "click[B08CXD2VHG]",
+    "click[select size: 1 count (pack of 1)]",
+    "click[select color: clip set]",
+    "click[Attributes]",
+    "click[Back to Search]",
+    "search[clip set hair extensions stainless steel]",
+    "click[B08CXD2VHG]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_96",
+   "reward": 0.6666666666666666,
+   "seconds": 7.062479019165039,
+   "llm_calls": 3,
+   "error": null,
+   "trace": [
+    "search[fresh scent body lotion dry skin]",
+    "click[B07PB1JLHP]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_97",
+   "reward": 0.8,
+   "seconds": 14.861868143081665,
+   "llm_calls": 5,
+   "error": null,
+   "trace": [
+    "search[blue women's size 6 open toe non-slip sandals]",
+    "click[B09PBLPLR1]",
+    "click[select color: blue]",
+    "click[select size: 6]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_98",
+   "reward": 1.0,
+   "seconds": 28.004858016967773,
+   "llm_calls": 5,
+   "error": null,
+   "trace": [
+    "search[tooloud italian flag red machine wash medium]",
+    "click[B00THW4ZB2]",
+    "click[select size: medium]",
+    "click[select color: red]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_99",
+   "reward": 0.0,
+   "seconds": 40.74159121513367,
+   "llm_calls": 15,
+   "error": "step limit",
+   "trace": [
+    "search[women wine red prom dress lace closure under 100]",
+    "click[B09DT62BVW]",
+    "click[Attributes]",
+    "click[Back to Search]",
+    "search[women's wine red prom dress lace closure under $100]",
+    "click[B07V6D1G16]",
+    "click[Attributes]",
+    "click[< Prev]",
+    "click[select color: wine red]",
+    "click[Attributes]",
+    "click[< Prev]",
+    "click[Attributes]",
+    "click[< Prev]",
+    "click[Attributes]",
+    "click[< Prev]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_100",
+   "reward": 1.0,
+   "seconds": 7.255213975906372,
+   "llm_calls": 3,
+   "error": null,
+   "trace": [
+    "search[body brush remove dead skin]",
+    "click[B09PD9N2R2]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_101",
+   "reward": 1.0,
+   "seconds": 6.04082179069519,
+   "llm_calls": 3,
+   "error": null,
+   "trace": [
+    "search[certified refurbished HP laser printer]",
+    "click[B07H658LTY]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_102",
+   "reward": 0.75,
+   "seconds": 8.533578872680664,
+   "llm_calls": 3,
+   "error": null,
+   "trace": [
+    "search[gray twin wooden frame daybed]",
+    "click[B094YFJ95K]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_103",
+   "reward": 1.0,
+   "seconds": 9.732371091842651,
+   "llm_calls": 4,
+   "error": null,
+   "trace": [
+    "search[peaceful purple eyeshadow makeup brush set]",
+    "click[B095TWK6H7]",
+    "click[select color: peaceful purple]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_104",
+   "reward": 0.75,
+   "seconds": 41.670498847961426,
+   "llm_calls": 13,
+   "error": null,
+   "trace": [
+    "search[multicolor vest machine washable 2xl]",
+    "click[B09F3CC5XD]",
+    "click[Back to Search]",
+    "search[multicolor vest machine washable 2xl]",
+    "click[Next >]",
+    "click[B08ZSDCQ3N]",
+    "click[Features]",
+    "click[< Prev]",
+    "click[Features]",
+    "click[< Prev]",
+    "click[select size: xx-large]",
+    "click[select color: multi1]",
+    "click[Buy Now]"
+   ]
+  },
+  {
+   "arm": "baseline",
+   "session": "baseline_fixed_105",
+   "reward": 1.0,
+   "seconds": 13.103307008743286,
+   "llm_calls": 3,
+   "error": null,
+   "trace": [
+    "search[dual band computer]",
+    "click[B07WTW4X4R]",
+    "click[Buy Now]"
+   ]
+  }
+ ]
+}

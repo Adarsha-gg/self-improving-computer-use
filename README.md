@@ -30,7 +30,7 @@ The recipe beat browsing on 44 tasks, lost on 11, and tied on 50.
 | **Learned recipe** | **1.000** | **10/10** | **8.6** | **2.9** |
 | Page-by-page browsing | 0.533 | 5/10 | 18.0 | 7.0 |
 
-**Caveats.** Each result is one run with no variance estimate. The browsing baseline is a simple agent we wrote, not a tuned published agent. Run 1 uses BM25 search instead of the original Lucene index, so these numbers do not compare with published WebShop scores. Full details are in [`docs/webshop-eval.md`](docs/webshop-eval.md).
+**Caveats.** Each result is one run with no variance estimate. The browsing baseline is a simple agent we wrote, not a tuned published agent. Run 1 uses BM25 search instead of the original Lucene index, so these numbers do not compare with published WebShop scores. Full details are in [`docs/webshop-eval.md`](docs/webshop-eval.md). Raw per-task results and the learned recipe are in [`docs/results/`](docs/results/), so anyone can recompute every number above.
 
 ## How it works
 
@@ -90,10 +90,10 @@ cp .env.example .env              # add MONGODB_URI and model credentials
 uv run python scripts/setup_atlas.py
 ```
 
-Run the WebShop live demo. It needs WebShop running on port 3000. See [`docs/webshop-eval.md`](docs/webshop-eval.md) for setup.
+Run the WebShop live demo. One script starts WebShop, the model proxy and the demo page. See [`docs/live-demo.md`](docs/live-demo.md) for setup and troubleshooting.
 
 ```bash
-uv run python demo/webshop_live.py    # http://127.0.0.1:8790
+scripts/start_demo.sh    # opens http://127.0.0.1:8790
 ```
 
 Run the tests. They use fakes, so they need no desktop, model or live database.

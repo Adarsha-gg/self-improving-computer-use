@@ -1,7 +1,10 @@
 # WebShop eval: learned API recipe vs. page-by-page browsing
 
 Run on 2026-09-26. Script: `scripts/webshop_eval.py`. Raw rows:
-`.recordings/webshop_eval_20260926_150359.json` (local, not committed).
+[`results/webshop_run1_n105.json`](results/webshop_run1_n105.json) (run 1) and
+[`results/webshop_run2_lucene_n10.json`](results/webshop_run2_lucene_n10.json) (run 2).
+The recipe learned from the demonstration is in
+[`results/learned_webshop_recipe.json`](results/learned_webshop_recipe.json).
 
 ## Question
 
