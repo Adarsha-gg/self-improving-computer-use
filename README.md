@@ -77,7 +77,6 @@ flowchart TD
 |---|---|
 | **Adarsha Mishra** | MongoDB layer and network-recipe learner |
 | Minh Le ([@lhnminh](https://github.com/lhnminh)) | Computer-use agent, coordinate-guide replay and local WebUI |
-| AJ | CI/CD |
 
 Minh's computer-use agent does the first run of every task and is the fallback when a recipe breaks. His README in the [upstream repo](https://github.com/lhnminh/self-improving-computer-use) covers that side.
 
